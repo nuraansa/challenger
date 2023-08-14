@@ -1,6 +1,6 @@
 const {express, routes} = require('./controller')
 const app = express()
-const port = +process.env.PORT ||| 3000
+const port = +process.env.PORT || 3000
 
 //static
 app.use(express.static('./static'))
