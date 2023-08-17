@@ -41,9 +41,9 @@ class Users{
         gender, userDOB, emailAdd, userPass,
         profileUrl
         FROM Users
-        WHERE emailAdd = ?;
+        WHERE emailAdd = '${emailAdd}';
         `
-        db.query(query,[emailAdd] ,async (err, result)=>{
+        db.query(query,async (err, result)=>{
             if(err) throw err
             if(!result?.length){
                 res.json({
@@ -118,6 +118,11 @@ class Users{
     }
     //update new user
     updateUser(req, res) {
+        const data = rew.body
+        if(data.userPass) {
+        data.userPass = hasSync(data.userPass, 15)
+        }
+    // To encrypt password^
         const query = `
         UPDATE Users
         SET ?
