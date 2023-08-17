@@ -5,4 +5,8 @@
 }
 body{
     text-align: center;
+    font-size: 3rem;
+    color:rgb(209, 130, 209);
+    margin-top: 20%;
+    background-color:rgb(133, 33, 133);
 }

@@ -1,4 +1,4 @@
-class orders {
+class Orders {
     
 }
-module.exports = orders
+module.exports = Orders

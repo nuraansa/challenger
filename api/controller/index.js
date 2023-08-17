@@ -1,5 +1,6 @@
 // Controller
 const express = require('express')
+const {verifyAToken} = require ('../middleware/AuthenticateUser.js')
 const bodyParser = require('body-parser')
 // router allows us to create a dynamic router
 const routes = express.Router()

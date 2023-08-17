@@ -1,4 +1,4 @@
-/ Books
+// Books
 const db = require("../config");
 class Books{
      register(req, res) {
