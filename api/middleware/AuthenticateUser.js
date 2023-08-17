@@ -8,13 +8,13 @@ function createToken(user) {
     },
     process.env.SECRET_KEY,
     {
-        exxpiresIn: '1h'
+        expiresIn: '1h'
     }
     )
 }
-// function verifyToken(req, res, next){
-//     const token = req.headers['Aauthorization']
-// }
+function verifyToken(req, res, next){
+    const token = req.headers['Authorization']
+}
 module.exports = {
     createToken
 }
